@@ -95,19 +95,6 @@ header .headOne .phone_email a i{
   display: block;
 }
 
-@media screen and (max-width:380px){
-  header .headOne .lang_profile_needs{
-    display: none;
-  }
-  header .headOne{
-    justify-content: center;
-  }
-  header .headOne .phone_email{
-    flex-wrap: wrap;
-    gap: 0;
-    justify-content: center;
-  }
-}
 .headTwo .Dubai_logo{
   display: flex;
   align-items: center;
@@ -183,6 +170,25 @@ header .headOne .phone_email a i{
 .headThree .menu_Search ul li a:hover{
   color: var(--primary-100);
 }
+@media screen and (max-width:380px){
+  header .headOne .lang_profile_needs{
+    display: none;
+  }
+
+  header .headOne .phone_email{
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;
+  }
+}
+@media screen and (min-width:381px) and (max-width:540px){
+  .headOne .lang_profile_needs .dropdown:nth-child(3) {
+    display: none;
+  }
+  header .headOne{
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 768px) {
   .headTwo{
     display:none;
@@ -226,15 +232,14 @@ header .headOne .phone_email a i{
     cursor: pointer;
   }
 }
+@media screen and (max-width: 767px) {
+  .headOne .lang_profile_needs .dropdown:nth-child(1), .dropdown:nth-child(2) {
+    display: none;
+  }
+}
 @media screen and (max-width: 900px) {
-  .headOne .lang_profile_needs {
+  .headOne .lang_profile_needs .dropdown:nth-child(1) {
     display: none;
-  }
-  .headOne .lang_profile_needs {
-    display: none;
-  }
-  header .headOne{
-    justify-content: center;
   }
 }
 /* Swipper */
