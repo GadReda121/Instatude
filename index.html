@@ -102,35 +102,33 @@
                     <input type="text" placeholder="بحث" />
                 </div>
             </div>
-            <!-- Bar -->
-            <i class="fas fa-bars"></i>
-            <!-- menu Items -->
-            <ul>
+            <i class="fas fa-bars" onclick="toggleMenu()"></i>
+            <ul id="menu">
                 <!-- xmark -->
-                <i class="fas fa-times"></i>
+                <i class="fas fa-times" onclick="toggleMenu()"></i>
                 <li>
-                    <a href="#">الرئيسية</a>
+                    <a href="#" onclick="closeMobileMenu()">الرئيسية</a>
                 </li>
                 <li>
-                    <a href="#">من نحن</a>
+                    <a href="#" onclick="closeMobileMenu()">من نحن</a>
                 </li>
                 <li>
-                    <a href="#">عن المعهد</a>
+                    <a href="#" onclick="closeMobileMenu()">عن المعهد</a>
                 </li>
                 <li>
-                    <a href="#">الخدمات</a>
+                    <a href="#" onclick="closeMobileMenu()">الخدمات</a>
                 </li>
                 <li>
-                    <a href="#">الكورسات</a>
+                    <a href="#" onclick="closeMobileMenu()">الكورسات</a>
                 </li>
                 <li>
-                    <a href="#">المركز الإعلامى</a>
+                    <a href="#" onclick="closeMobileMenu()">المركز الإعلامى</a>
                 </li>
                 <li>
-                    <a href="#">الأخبار</a>
+                    <a href="#" onclick="closeMobileMenu()">الأخبار</a>
                 </li>
                 <li>
-                    <a href="#">اتصل بنا</a>
+                    <a href="#" onclick="closeMobileMenu()">اتصل بنا</a>
                 </li>
             </ul>
         </div>
@@ -271,6 +269,8 @@
             </div>
         </div>
     </div>
+    <!-- !BtnToTop -->
+    <i class="fas fa-chevron-up btnTop"></i>
     <!-- !Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>

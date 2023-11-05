@@ -3,23 +3,27 @@ const headThree = document.querySelector(".headThree");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 20) {
     headThree.classList.add("sticky");
+    btnTop.style.cssText = "display:block";
   } else {
     headThree.classList.remove("sticky");
+    btnTop.style.cssText = "display:none";
   }
 });
 
 // !header in Mob
-const openHeader = document.querySelector(".fa-bars");
-const closeHeader = document.querySelector(".fa-times");
-const header = document.querySelector(".headThree ul");
-
-openHeader.addEventListener("click", () => {
-  header.style.cssText = "display:flex !important";
-  header.classList.add("animate__animated", "animate__fadeInRight");
-});
-
-closeHeader.addEventListener("click", () => {
-  header.style.cssText = "display:none !important";
+function toggleMenu() {
+  var menu = document.querySelector("#menu");
+  menu.classList.toggle("activeMenu");
+  menu.classList.add("animate__animated", "animate__fadeInRight");
+}
+function closeMobileMenu(){
+  var menu = document.querySelector("#menu");
+  menu.classList.remove("activeMenu");
+}
+// !Btn To Scrool Top
+const btnTop = document.querySelector(".btnTop");
+btnTop.addEventListener("click", () => {
+  window.scrollTo(0, 0);
 });
 
 // !Swipper
@@ -85,6 +89,8 @@ updateCounter();
 // Update the counter every second
 const timer = setInterval(updateCounter, 1000);
 
+
+// !Reveal
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
   for (var i = 0; i < reveals.length; i++) {

@@ -101,10 +101,6 @@ header .headOne .phone_email a i{
   gap: 1.5rem;
 }
 
-.fa-bars, .fa-times{
-  display: none !important;
-}
-
 .headThree{
   width: 100%;
   margin: 1rem auto 0 auto;
@@ -156,7 +152,7 @@ header .headOne .phone_email a i{
   color: var(--text-100)
 }
 .headThree .menu_Search ul{
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 1.5rem;
   direction: rtl;
@@ -170,14 +166,17 @@ header .headOne .phone_email a i{
 .headThree .menu_Search ul li a:hover{
   color: var(--primary-100);
 }
+.headThree .menu_Search .fa-bars, .headThree .menu_Search .fa-times{
+  display: none;
+}
+
 @media screen and (max-width:380px){
   header .headOne .lang_profile_needs{
     display: none;
   }
-
   header .headOne .phone_email{
-    flex-wrap: wrap;
     gap: 0;
+    flex-wrap: wrap;
     justify-content: center;
   }
 }
@@ -199,37 +198,8 @@ header .headOne .phone_email a i{
   .headThree .menu_Search{
     width: 95%;
   }
-  .headThree .fa-bars{
-    display: block !important;
-    font-size: 20px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  .headThree ul{
-    display: none !important;
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: 99;
-    height: 100vh;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--bg-200);
-    position: fixed;
-    gap: 3rem !important;
-  }
-  .headThree ul .fa-times{
-    display: block !important;
-    position: absolute;
-    top:30px;
-    left: 30px;
-    background-color: var(--bg-100);
-    padding: .5rem .8rem;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    cursor: pointer;
+  .headThree .menu_Search ul.activeMenu{
+    width: 100% !important;
   }
 }
 @media screen and (max-width: 767px) {
@@ -240,6 +210,46 @@ header .headOne .phone_email a i{
 @media screen and (max-width: 900px) {
   .headOne .lang_profile_needs .dropdown:nth-child(1) {
     display: none;
+  }
+}
+
+@media screen and (max-width:1264px){
+  .headThree .menu_Search ul{
+    display: none !important;
+  }
+  .headThree .menu_Search ul.activeMenu{
+    display: flex !important;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 99;
+    height: 100vh;
+    width: 40%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-200);
+    position: fixed;
+    gap: 3rem !important;
+    display: none;
+    box-shadow: -5px 0 100px rgba(0,0,0,0.1);
+  }
+  .headThree .menu_Search ul.activeMenu .fa-times{
+    display: block ;
+    position: absolute;
+    top:30px;
+    left: 30px;
+    background-color: var(--bg-100);
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+  }
+  .headThree .menu_Search .fa-bars{
+    display: flex;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
   }
 }
 /* Swipper */
@@ -608,26 +618,44 @@ header .headOne .phone_email a i{
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
+/* !BtnToTop */
+.btnTop{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-100);
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-300);
+  z-index: 999;
+  position: fixed;
+  display: none;
+  transition: all 0.3s ease;
+}
+.btnTop:hover{
+  transform: translateY(-5px);
+}
 /* !REVEAL */
 /* Animation => SCROLL */
-.reveal {
+/* .reveal {
   position: relative;
   opacity: 0;
 }
 
-.reveal.active {
+.reveal .active {
   opacity: 1;
 }
 
-.active.fade-bottom {
+.active .fade-bottom {
   animation: fade-bottom 1s ease-in;
 }
 
-.active.fade-left {
+.active .fade-left {
   animation: fade-left 1s ease-in;
 }
 
-.active.fade-right {
+.active .fade-right {
   animation: fade-right 1s ease-in;
 }
 
@@ -665,4 +693,4 @@ header .headOne .phone_email a i{
     transform: translateX(0);
     opacity: 1;
   }
-}
+} */
