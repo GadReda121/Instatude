@@ -7,9 +7,17 @@
     scroll-behavior: smooth;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
-
 body{
     background-color: var(--bg-100);
+}
+html::-webkit-scrollbar {
+  width: .2rem;
+  background-color: var(--bg-100);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--primary-100);
+  width: .2rem;
 }
 header{
   width: 100%;
@@ -636,61 +644,4 @@ header .headOne .phone_email a i{
 .btnTop:hover{
   transform: translateY(-5px);
 }
-/* !REVEAL */
-/* Animation => SCROLL */
-/* .reveal {
-  position: relative;
-  opacity: 0;
-}
 
-.reveal .active {
-  opacity: 1;
-}
-
-.active .fade-bottom {
-  animation: fade-bottom 1s ease-in;
-}
-
-.active .fade-left {
-  animation: fade-left 1s ease-in;
-}
-
-.active .fade-right {
-  animation: fade-right 1s ease-in;
-}
-
-@keyframes fade-bottom {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-left {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-right {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-} */

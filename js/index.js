@@ -44,15 +44,12 @@ var swiper = new Swiper(".mySwiper", {
 function updateCounter() {
   const currentTime = new Date().getTime();
   const targetTime = localStorage.getItem("targetTime");
-
   if (!targetTime || targetTime <= currentTime) {
     // Counter reached 00:00:00 or target time not set, handle it as needed.
     clearInterval(timer);
     return;
   }
-
   const timeDifference = targetTime - currentTime;
-
   // Calculate hours, minutes, and seconds
   const hours = String(
     Math.floor((timeDifference / 1000 / 3600) % 24)
@@ -64,7 +61,6 @@ function updateCounter() {
     2,
     "0"
   );
-
   // Update the digit elements with the new values
   const digitElements = document.querySelectorAll(".digit");
   digitElements[0].innerText = hours[0];
@@ -74,7 +70,6 @@ function updateCounter() {
   digitElements[4].innerText = seconds[0];
   digitElements[5].innerText = seconds[1];
 }
-
 // Initialize or retrieve the target time from local storage
 let targetTime = localStorage.getItem("targetTime");
 if (!targetTime) {
@@ -82,27 +77,7 @@ if (!targetTime) {
   targetTime = new Date().getTime() + 8 * 60 * 60 * 1000; // 8 hours in milliseconds
   localStorage.setItem("targetTime", targetTime);
 }
-
 // Update the counter immediately (initial setup)
 updateCounter();
-
 // Update the counter every second
 const timer = setInterval(updateCounter, 1000);
-
-
-// !Reveal
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-window.addEventListener("scroll", reveal);
