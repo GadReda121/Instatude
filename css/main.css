@@ -641,7 +641,7 @@ header .headOne .phone_email a i{
   border-radius: 50%;
   cursor: pointer;
   color: var(--text-300);
-  z-index: 999;
+  z-index: 3;
   position: fixed;
   display: none;
   transition: all 0.3s ease;
