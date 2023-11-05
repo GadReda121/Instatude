@@ -127,6 +127,7 @@ header .headOne .phone_email a i{
 }
 .headThree .search_btn .search{
   position: relative;
+  margin-top: 2px;
 }
 .headThree .search_btn .search i{
   position: absolute;
@@ -205,9 +206,13 @@ header .headOne .phone_email a i{
   }
   .headThree .menu_Search{
     width: 95%;
+    gap: .5rem;
   }
   .headThree .menu_Search ul.activeMenu{
     width: 100% !important;
+  }
+  .headThree .search_btn a button{
+    padding: 12px 20px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -257,7 +262,7 @@ header .headOne .phone_email a i{
     display: flex;
     font-size: 20px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 11px;
   }
 }
 /* Swipper */
@@ -526,7 +531,7 @@ header .headOne .phone_email a i{
     width: 95%;
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 20px;
+    padding: 30px 20px;
   }
   .details .details_img{
     display: none;
