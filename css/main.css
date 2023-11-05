@@ -1,5 +1,4 @@
 @import url('./variables');
-
 *{
     margin: 0;
     padding: 0;
@@ -14,115 +13,66 @@ html::-webkit-scrollbar {
   width: .2rem;
   background-color: var(--bg-100);
 }
-
 html::-webkit-scrollbar-thumb {
   background-color: var(--primary-100);
   width: .2rem;
 }
 header{
-  width: 100%;
   background-color: var(--bg-200);
-  padding: .5rem 0;
 }
 header .headOne{
   width: 80%;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   direction: rtl;
 }
-.headTwo{
-  width: 80%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem auto;
+header .headOne .dropdown-toggle{
+  background: none;
+  outline: none;
+  border: none;
+}
+header .headOne .line{
+  width: 1px;
+  height: 20px;
+  background-color: var(--text-100);
+  margin: 0 .2rem;
 }
 header .headOne .phone_email, .lang_profile_needs{
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: .5rem;
   direction: rtl;
 }
-header .headOne .lang_profile_needs .lang{
-  text-decoration: none;
-  color: var(--text-100);
-  cursor: pointer;
-}
 header .headOne .phone_email a{
-  text-decoration: none;
   color: var(--text-100);
   transition: all 0.3s ease;
 }
+header .headOne .phone_email a:hover{
+  color: var(--primary-100);
+}
 header .headOne .phone_email a i{
-  margin-left: 5px;
+  margin-left: 2px;
   color: var(--primary-100);
 }
-/* Style for the dropdown container */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-/* Style for the button that opens the dropdown */
-.dropdown-button {
-  padding: 5px 8px;
-  border: none;
+header .headOne .dropdown button{
   cursor: pointer;
-  background: none;
-  font-weight: 600;
 }
-.dropdown-button .fa-user, .fa-wheelchair-move{
+header .headOne .dropdown i{
   color: var(--primary-100);
 }
-/* Style for the dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 130px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+.headTwo{
+  width: 80%;
 }
-
-/* Style for individual dropdown options */
-.dropdown-content a {
-  color: #333;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of options on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown content when the button is hovered over */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.headTwo .Dubai_logo{
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
 .headThree{
-  width: 100%;
-  margin: 1rem auto 0 auto;
   background-color: var(--bg-200);
 }
 .headThree .menu_Search{
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin: auto;
-  padding: 1rem 0;
 }
 .headThree .search_btn{
-  display:flex;
   gap: .5rem;
 }
 .headThree .search_btn .search{
@@ -158,13 +108,19 @@ header .headOne .phone_email a i{
   font-weight: 600;
   cursor: pointer;
   background-color: var(--primary-100);
-  color: var(--text-100)
+  color: var(--text-100);
+  transition: all 0.3s ease;
+}
+.headThree .search_btn a button:hover{
+  background-color: var(--primary-200);
+  color: var(--text-300);
 }
 .headThree .menu_Search ul{
   display: flex !important;
   align-items: center;
   gap: 1.5rem;
   direction: rtl;
+  margin-bottom: 5px;
   list-style: none;
 }
 .headThree .menu_Search ul li a{
@@ -178,55 +134,53 @@ header .headOne .phone_email a i{
 .headThree .menu_Search .fa-bars, .headThree .menu_Search .fa-times{
   display: none;
 }
-
-@media screen and (max-width:380px){
+@media screen and (max-width: 560px) {
   header .headOne .lang_profile_needs{
-    display: none;
-  }
-  header .headOne .phone_email{
-    gap: 0;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-@media screen and (min-width:381px) and (max-width:540px){
-  .headOne .lang_profile_needs .dropdown:nth-child(3) {
     display: none;
   }
   header .headOne{
     justify-content: center;
+    width: 100%;
+  }
+  header .headOne .phone_email{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .5rem;
+    width: 90%;
+  }
+  header .headOne .line{
+    display: none;
   }
 }
 @media screen and (max-width: 768px) {
+  header .headOne .lang_profile_needs .profile{
+    display: none;
+  }
   .headTwo{
-    display:none;
+    display:none !important;
   }
   .headThree{
-    margin: 5px 0 0 0;
+    margin: 5px 0 4px;
   }
   .headThree .menu_Search{
-    width: 95%;
-    gap: .5rem;
+    width: 90%;
+    gap: .3rem;
   }
   .headThree .menu_Search ul.activeMenu{
     width: 100% !important;
   }
   .headThree .search_btn a button{
-    padding: 12px 20px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .headOne .lang_profile_needs .dropdown:nth-child(1), .dropdown:nth-child(2) {
-    display: none;
-  }
-}
-@media screen and (max-width: 900px) {
-  .headOne .lang_profile_needs .dropdown:nth-child(1) {
-    display: none;
+    padding: 10px 15px;
   }
 }
 
-@media screen and (max-width:1264px){
+@media screen and (max-width:991px){
+  header .headOne .lang_profile_needs .dropdown:nth-child(1),
+  header .headOne .lang_profile_needs .line{
+    display: none;
+  }
+}
+@media screen and (max-width:1300px){
   .headThree .menu_Search ul{
     display: none !important;
   }
@@ -265,6 +219,8 @@ header .headOne .phone_email a i{
     margin-top: 13px;
   }
 }
+
+
 /* Swipper */
 .swiper {
   width: 100%;
@@ -304,7 +260,7 @@ header .headOne .phone_email a i{
   position: absolute;
   right: 0;
   width: 100px;
-  height: 5px;
+  height: 4px;
   background-color: var(--primary-300);
   margin: 1rem 0;
   border-radius: 10px;
@@ -322,14 +278,22 @@ header .headOne .phone_email a i{
   outline: none;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 .swiper .swiper-wrapper .swiper-slide .content .btns a:nth-child(1) button{
   background-color: var(--primary-300);
   color: var(--text-100);
 }
+.swiper .swiper-wrapper .swiper-slide .content .btns a:nth-child(1) button:hover{
+  background-color: var(--primary-100);
+  color: var(--text-300);
+}
 .swiper .swiper-wrapper .swiper-slide .content .btns a:nth-child(2) button{
   background-color: var(--primary-200);
   color: var(--text-300);
+}
+.swiper .swiper-wrapper .swiper-slide .content .btns a:nth-child(2) button:hover{
+  box-shadow: 0 0 0 2px var(--primary-100), 0 0 0 4px var(--primary-200);
 }
 
 .swiper-slide img {
@@ -350,12 +314,19 @@ header .headOne .phone_email a i{
   font-size: 15px !important;
   font-weight: bolder;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px){
+  
   .swiper .swiper-wrapper .swiper-slide .content{
-    width: 95%;
-    margin: 0 15%;
     gap: 1rem;
-    justify-content: center;
+    width: 90%;
+    margin: 0 15%;
+  }
+  .swiper .swiper-wrapper .swiper-slide .content .btns a:nth-child(1) button{
+    display: none;
+  }
+  .swiper .swiper-wrapper .swiper-slide .content .btns a:nth-child(2) button{
+    padding: 10px 20px;
+    font-size: 10px;
   }
   .swiper .swiper-wrapper .swiper-slide .content h1{
     font-size: 20px;
@@ -366,20 +337,17 @@ header .headOne .phone_email a i{
     position: absolute;
     right: 0;
     width: 100px;
-    height: 3px;
+    height: 5px;
     background-color: var(--primary-300);
-    margin: .5rem 0;
+    margin: 1rem 0;
     border-radius: 10px;
   }
-  .swiper .swiper-wrapper .swiper-slide .content .btns a button{
-    padding: 12px 25px;
-    font-size: 15px;
-  }
-  .swiper .swiper-wrapper .swiper-slide .content .btns{
-    display: flex;
-    justify-content: center;
-    gap: .5rem;
-    margin-top: .5rem;
+}
+@media screen and (min-width:601px) and (max-width: 920px) {
+  .swiper .swiper-wrapper .swiper-slide .content{
+    top: 20px;
+    justify-content: start;
+    gap: 1.5rem;
   }
 }
 
@@ -388,23 +356,25 @@ header .headOne .phone_email a i{
   background-color: var(--bg-100);
   width: 80%;
   margin: auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   position: relative;
-  top: -100px;
+  top: -70px;
   z-index: 8;
 }
-.counter img{
+
+.counter .counter_img img{
   width: 100%;
 }
 .counter .counter_parent{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 2rem;
+  gap: 1.5rem;
+  padding: 1rem 3rem;
 }
 .counter .counter_parent .content{
   display: flex;
@@ -415,8 +385,10 @@ header .headOne .phone_email a i{
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  gap: 1rem;
   text-align: right;
+}
+.counter .text h2{
+  color: var(--text-100);
 }
 .counter .text .content a{
   direction: rtl;
@@ -425,25 +397,26 @@ header .headOne .phone_email a i{
   transition: all 0.3s ease;
 }
 #counter {
-  text-align: center;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
-
+#counter span{
+  font-size: 25px;
+}
 /* Style the individual digits */
 .digit {
   background-color: #fff;
   outline: 10px solid #eee;
   color: #333;
-  padding: 0.5em;
-  margin: .8em;
+  padding: 1rem;
+  margin: 1rem;
+  font-weight: bolder;
 }
 .counter .counter_parent .btns{
   display: flex;
   gap: .5rem;
-  justify-content: flex-end;
-  margin-top: 1rem;
+  justify-content: space-between;
 }
 .counter .counter_parent .btns button{
   border-radius: 25px;
@@ -461,28 +434,77 @@ header .headOne .phone_email a i{
   color: var(--text-300);
 }
 
+@media screen and (max-width: 600px){
+  .counter{
+    padding: 1rem 0 !important;
+    width: 100% !important;
+  }
+  .counter .counter_parent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  #counter{
+    gap: 0rem;
+    justify-content: center;
+  }
+  .digit {
+    outline: 3px solid #eee;
+    color: #333;
+    padding: .5rem !important;
+    margin: .7rem !important;
+  }
+  /* Style the individual digits */
+  .counter .counter_parent .btns{
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+  .counter .counter_parent .btns button{
+    width: 100%;
+    margin: 5px auto;
+  }
+  .counter .counter_img{
+    display: flex !important;
+  }
+}
+
 @media screen and (max-width:767px){
   .counter{
-    width: 95%;
-    flex-direction: column;
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 0px;
-    z-index: 8;
+    z-index: 2;
+    top: .5rem;
   }
-  .counter .counter_parent{
+  #counter{
+    justify-content: center;
+  } 
+  .digit {
+    background-color: #fff;
+    outline: 10px solid #eee;
+    color: #333;
     padding: 1rem;
+    margin: 1rem;
+    font-weight: bolder;
+  }
+  .counter .counter_img{
+    display: none;
   }
 }
-@media screen and (min-width:768px) and (max-width:1140px){
+@media screen and (min-width:768px) and (max-width:1100px){
   .counter{
-    width: 90%;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem 0;
   }
-  .counter .counter_parent{
-    padding: 1rem;
+  .counter .counter_img{
+    display: none;
+  }
+  #counter{
+    justify-content: center;
   }
 }
 
@@ -500,7 +522,7 @@ header .headOne .phone_email a i{
 .details .content{
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; 
+  gap: 1rem; 
 }
 .details .content .line_title{
   width: 100%;
@@ -509,12 +531,12 @@ header .headOne .phone_email a i{
 }
 .details .content .line{
   width: 100px;
-  height: 5px;
+  height: 3px;
   background-color: var(--primary-100);
   border-radius: 10px;
 }
 .details .content a button{
-  padding: 12px 35px;
+  padding: 12px 45px;
   border-radius: 25px;
   border: none;
   outline: none;
@@ -524,14 +546,15 @@ header .headOne .phone_email a i{
   color: var(--text-300);
 }
 .details .details_img img{
-  width: 100%;
+  width: 150%;
 }
 @media screen and (max-width:767px){
   .details{
-    width: 95%;
+    width: 90%;
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 30px 20px;
+    margin-top: 2rem;
   }
   .details .details_img{
     display: none;
@@ -603,9 +626,9 @@ header .headOne .phone_email a i{
   margin: auto;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
 }
 .Statistics .numbers .num_text{
   display: flex;
@@ -619,7 +642,22 @@ header .headOne .phone_email a i{
   font-weight: normal;
   color: var(--text-300);
 }
-
+@media screen and (max-width: 650px){
+  .Statistics .numbers{
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media screen and (max-width: 767px){
+.Statistics .numbers{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 2rem;
+}
+}
 /* !Stick */
 .sticky{
   position: fixed;

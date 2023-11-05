@@ -15,11 +15,18 @@ function toggleMenu() {
   var menu = document.querySelector("#menu");
   menu.classList.toggle("activeMenu");
   menu.classList.add("animate__animated", "animate__fadeInRight");
+  // Check if the menu is active and toggle the body's scrolling
+  if (menu.classList.contains("activeMenu")) {
+    document.body.style.overflow = "hidden"; // Disable scrolling
+  } else {
+    document.body.style.overflow = "auto"; // Enable scrolling
+  }
 }
 function closeMobileMenu(){
   var menu = document.querySelector("#menu");
   menu.classList.remove("activeMenu");
 }
+
 // !Btn To Scrool Top
 const btnTop = document.querySelector(".btnTop");
 btnTop.addEventListener("click", () => {

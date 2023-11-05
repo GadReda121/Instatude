@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ar">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=7" />
@@ -12,10 +11,11 @@
     <!-- !Icon -->
     <link rel="icon" href="./images/home/instatidute_Logo.png" />
     <!-- !CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/variables.css" />
     <!-- !Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.min.css" />
     <!-- !Swipper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- !Animate -->
@@ -24,77 +24,77 @@
 
 <body>
     <!-- !Header One (3 Dropdown + email + phone) -->
-    <header>
-        <div class="headOne">
+    <header class="w-100 py-2">
+        <div class="headOne m-auto">
             <div class="phone_email">
-                <!-- phone -->
-                <a href="tel:00971-555-18-60-60">
+                <!-- Phone -->
+                <a href="tel:00971-555-18-60-60" class="text-decoration-none">
                     <i class="fas fa-phone-alt"></i>
                     <span>00971-555-18-60-60</span>
                 </a>
-                <!-- email -->
-                <a href="mailto:info@miq.ae">
+                <span class="line"></span>
+                <!-- Email -->
+                <a href="mailto:info@miq.ae" class="text-decoration-none">
                     <i class="fas fa-envelope"></i>
                     <span>info@miq.ae</span>
                 </a>
             </div>
             <div class="lang_profile_needs">
                 <div class="dropdown">
-                    <button class="dropdown-button">
-                        <!-- needs peaople -->
+                    <button class="dropdown-toggle" type="button" id="needsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <!-- Needs people -->
                         <i class="fa-solid fa-wheelchair-move"></i>
-                        <span>ذوى الإحتياجات الخاص</span>
-                        <i class="fas fa-chevron-down"></i>
+                        ذوى الإحتياجات الخاص
                     </button>
-                    <div class="dropdown-content">
-                        <a href="#">.......</a>
-                        <a href="#">.......</a>
-                        <a href="#">.......</a>
+                    <div class="dropdown-menu" aria-labelledby="needsDropdown">
+                        <a class="dropdown-item text-right" href="#">.......</a>
+                        <a class="dropdown-item text-right" href="#">.......</a>
+                        <a class="dropdown-item text-right" href="#">.......</a>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <button class="dropdown-button">
-                        <!-- icon profile -->
+                <span class="line"></span>
+                <div class="dropdown profile">
+                    <button class="dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <!-- Icon profile -->
                         <i class="fas fa-user"></i>
-                        <span>حسابى</span>
-                        <i class="fas fa-chevron-down"></i>
+                        حسابى
                     </button>
-                    <div class="dropdown-content">
-                        <a href="#">الإعدادات</a>
-                        <a href="#">تسجيل الخروج</a>
+                    <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item text-right" href="#">الإعدادات</a>
+                        <a class="dropdown-item text-right" href="#">تسجيل الخروج</a>
                     </div>
                 </div>
+                <span class="line"></span>
                 <div class="dropdown">
-                    <button class="dropdown-button">
+                    <button class="dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img src="./images/home/emarate_lang.png" alt="Emarate Logo" />
-                        <span>اللغة العربية</span>
-                        <i class="fas fa-chevron-down"></i>
+                        اللغة العربية
                     </button>
-                    <div class="dropdown-content">
-                        <a href="#">اللغة الإنجليزية</a>
-                        <a href="#">اللغة الفرنسية</a>
+                    <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <a class="dropdown-item text-right" href="#">اللغة الإنجليزية</a>
+                        <a class="dropdown-item text-right" href="#">اللغة الفرنسية</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
     <!-- !Header Two (2 Section : 1 -> 2 logo_img, 2 -> Logo) -->
-    <div class="headTwo">
-        <div class="Dubai_logo">
+    <div class="headTwo mx-auto my-4 d-flex justify-content-between">
+        <div class="d-flex align-items-center">
             <img src="./images/home/Dubai_logo.png" alt="Dubai" />
-            <img src="./images/home/logo.png" alt="Dubai" />
+            <img src="./images/home/logo.png" alt="National" class="mx-3"/>
         </div>
         <div>
             <img src="./images/home/instatidute_Logo.png" alt="Dubai" />
         </div>
     </div>
     <!-- !Header Three (2 Section: 1 -> btn+search , 2 -> menu Items) -->
-    <div class="headThree">
-        <div class="menu_Search">
+    <div class="headThree w-100">
+        <div class="menu_Search m-auto py-2">
             <!-- search + btn -->
-            <div class="search_btn">
+            <div class="search_btn d-flex">
                 <a href="#">
-                    <button>التسجيل معنا</button>
+                    <button type="button">التسجيل معنا</button>
                 </a>
                 <div class="search">
                     <i class="fas fa-search"></i>
@@ -170,7 +170,7 @@
             <!-- ! Counter -->
             <div class="counter_parent">
                 <div class="text">
-                    <h2>خبير 1 (التعليم قبل الجامعي) إعداد مراقبين<br> لجودة التعليم</h2>
+                    <h2>خبير 1 (التعليم قبل الجامعي) إعداد مراقبين لجودة التعليم</h2>
                     <div class="content">
                         <!-- zoom -->
                         <a href="">
@@ -184,16 +184,16 @@
                         </a>
                     </div>
                 </div>
-                <div id="counter">
-                    <span class="digit">0</span>
-                    <span class="digit">0</span>
-                    <span>:</span>
-                    <span class="digit">0</span>
-                    <span class="digit">0</span>
-                    <span>:</span>
-                    <span class="digit">0</span>
-                    <span class="digit">0</span>
-                </div>
+                    <div id="counter">
+                        <span class="digit">0</span>
+                        <span class="digit">0</span>
+                        <span>:</span>
+                        <span class="digit">0</span>
+                        <span class="digit">0</span>
+                        <span>:</span>
+                        <span class="digit">0</span>
+                        <span class="digit">0</span>
+                    </div>
                 <div class="btns">
                     <button>الدورة جارية الآن</button>
                     <button>المزيد من التفاصيل</button>
@@ -275,6 +275,9 @@
     <i class="fas fa-chevron-up btnTop"></i>
     <!-- !Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
