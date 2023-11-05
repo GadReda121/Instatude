@@ -1,10 +1,16 @@
 @import url('./variables');
+
+@font-face {
+  src: url('../font/Tajawal-Medium.ttf') format('truetype');
+  font-family: 'tajwal';
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'tajwal', sans-serif;
 }
 body{
     background-color: var(--bg-100);
@@ -120,13 +126,14 @@ header .headOne .dropdown i{
   align-items: center;
   gap: 1.5rem;
   direction: rtl;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   list-style: none;
 }
 .headThree .menu_Search ul li a{
   text-decoration: none;
   color: var(--text-100);
   transition: all 0.3s ease;
+  font-weight: 600;
 }
 .headThree .menu_Search ul li a:hover{
   color: var(--primary-100);
@@ -150,6 +157,10 @@ header .headOne .dropdown i{
   }
   header .headOne .line{
     display: none;
+  }
+  .headThree .menu_Search{
+    width: 95% !important;
+    gap: .3rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -253,6 +264,7 @@ header .headOne .dropdown i{
 .swiper .swiper-wrapper .swiper-slide .content h1{
   font-size: 50px;
   position: relative;
+  font-weight: 600;
 }
 .swiper .swiper-wrapper .swiper-slide .content h1::after{
   content: '';
@@ -279,6 +291,7 @@ header .headOne .dropdown i{
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: 500;
 }
 .swiper .swiper-wrapper .swiper-slide .content .btns a:nth-child(1) button{
   background-color: var(--primary-300);
@@ -329,7 +342,7 @@ header .headOne .dropdown i{
     font-size: 10px;
   }
   .swiper .swiper-wrapper .swiper-slide .content h1{
-    font-size: 20px;
+    font-size: 25px;
   }
   .swiper .swiper-wrapper .swiper-slide .content h1::after{
     content: '';
@@ -337,7 +350,7 @@ header .headOne .dropdown i{
     position: absolute;
     right: 0;
     width: 100px;
-    height: 5px;
+    height: 3px;
     background-color: var(--primary-300);
     margin: 1rem 0;
     border-radius: 10px;
@@ -389,6 +402,7 @@ header .headOne .dropdown i{
 }
 .counter .text h2{
   color: var(--text-100);
+  font-weight: 600;
 }
 .counter .text .content a{
   direction: rtl;
@@ -447,7 +461,7 @@ header .headOne .dropdown i{
   }
   #counter{
     gap: 0rem;
-    justify-content: center;
+    justify-content: space-between !important;
   }
   .digit {
     outline: 3px solid #eee;
@@ -458,7 +472,7 @@ header .headOne .dropdown i{
   /* Style the individual digits */
   .counter .counter_parent .btns{
     display: block;
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
   .counter .counter_parent .btns button{
@@ -524,16 +538,20 @@ header .headOne .dropdown i{
   flex-direction: column;
   gap: 1rem; 
 }
+.details .content h2{
+  font-weight: 600;
+}
 .details .content .line_title{
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 .details .content .line{
-  width: 100px;
+  width: 70px;
   height: 3px;
   background-color: var(--primary-100);
   border-radius: 10px;
+  margin-top: -10px;
 }
 .details .content a button{
   padding: 12px 45px;
@@ -575,6 +593,10 @@ header .headOne .dropdown i{
   text-align: center;
   margin: 3rem auto;
 }
+.instatude_services .title h2{
+  font-weight: 600;
+  color: var(--text-100);
+}
 .instatude_services .title .line_title{
   width: 100%;
   display: flex;
@@ -613,7 +635,15 @@ header .headOne .dropdown i{
 .instatude_services .cards .card img{
   width: 100%;
 }
-
+.instatude_services .cards .card h3{
+  font-weight: 600;
+  color: var(--text-100);
+}
+@media screen and (max-width: 767px){
+  .instatude_services{
+    width: 90%;
+  }
+}
 /* Statistics */
 .Statistics{
   margin: 3rem 0 5rem 0;
@@ -641,6 +671,10 @@ header .headOne .dropdown i{
   font-size: 50px;
   font-weight: normal;
   color: var(--text-300);
+}
+.Statistics .numbers .num_text h3{
+  font-weight: 600;
+  color: var(--text-100);
 }
 @media screen and (max-width: 650px){
   .Statistics .numbers{
