@@ -80,10 +80,12 @@ header .headOne .dropdown i{
 }
 .headThree .search_btn{
   gap: .5rem;
+  display: flex;
+  align-items: center;
 }
 .headThree .search_btn .search{
   position: relative;
-  margin-top: 3px;
+  margin: 0;
 }
 .headThree .search_btn .search i{
   position: absolute;
@@ -126,7 +128,7 @@ header .headOne .dropdown i{
   align-items: center;
   gap: 1.5rem;
   direction: rtl;
-  margin-bottom: 4px;
+  margin: 0;
   list-style: none;
 }
 .headThree .menu_Search ul li a{
@@ -330,7 +332,7 @@ header .headOne .dropdown i{
 @media screen and (max-width: 600px){
   
   .swiper .swiper-wrapper .swiper-slide .content{
-    gap: 1rem;
+    gap: .5rem;
     width: 90%;
     margin: 0 15%;
   }
@@ -464,9 +466,9 @@ header .headOne .dropdown i{
     justify-content: space-between !important;
   }
   .digit {
-    outline: 3px solid #eee;
+    outline: 8px solid #eee !important;
     color: #333;
-    padding: .5rem !important;
+    padding: .6rem !important;
     margin: .7rem !important;
   }
   /* Style the individual digits */
@@ -692,3 +694,61 @@ header .headOne .dropdown i{
   transform: translateY(-5px);
 }
 
+/* !REVEAL */
+/* Animation => SCROLL */
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
