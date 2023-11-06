@@ -11,6 +11,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'tajwal', sans-serif;
+    line-height: 1.5;
 }
 body{
     background-color: var(--bg-100);
