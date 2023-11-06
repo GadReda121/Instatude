@@ -1,10 +1,9 @@
 @import url('./variables');
 
 @font-face {
-  src: url('../font/Tajawal-Medium.ttf') format('truetype');
+  src: url('../font/Tajawal-Regular.ttf') format('truetype');
   font-family: 'tajwal';
 }
-
 *{
     margin: 0;
     padding: 0;
@@ -13,7 +12,7 @@
     font-family: 'tajwal', sans-serif;
 }
 body{
-    background-color: var(--bg-100);
+  background-color: var(--bg-100);
 }
 html::-webkit-scrollbar {
   width: .2rem;
