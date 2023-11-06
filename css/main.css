@@ -1,7 +1,7 @@
 @import url('./variables');
 
 @font-face {
-  src: url('../font/Tajawal-Regular.ttf') format('truetype');
+  src: url('../font/Tajawal-Medium.ttf') format('truetype');
   font-family: 'tajwal';
 }
 *{
@@ -155,7 +155,7 @@ header .headOne .dropdown i{
     justify-content: space-between;
     flex-wrap: wrap;
     gap: .5rem;
-    width: 90%;
+    width: 95%;
   }
   header .headOne .line{
     display: none;
