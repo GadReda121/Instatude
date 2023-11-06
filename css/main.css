@@ -431,7 +431,7 @@ header .headOne .dropdown i{
   background-color: #fff;
   outline: 10px solid #eee;
   color: #333;
-  padding: 1rem;
+  padding: 1.5rem;
   margin: 1rem;
   font-weight: bolder;
 }
@@ -469,12 +469,12 @@ header .headOne .dropdown i{
   }
   #counter{
     gap: 0rem;
-    justify-content: space-between !important;
+    justify-content: center !important;
   }
   .digit {
     outline: 8px solid #eee !important;
     color: #333;
-    padding: .6rem !important;
+    padding: .7rem !important;
     margin: .7rem !important;
   }
   /* Style the individual digits */
